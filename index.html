@@ -2,22 +2,22 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Agencia de Viajes - Personalizar Paquete</title>
+    <title>Personalizador de Paquete Turístico</title>
 </head>
 <body>
     <h1>Personaliza tu Paquete Turístico</h1>
-    
+
     <form action="resultados.php" method="POST">
-        
         <h2>Datos del cliente</h2>
         <label for="nombre">Nombre completo:</label><br>
         <input type="text" id="nombre" name="nombre" required><br><br>
-        
+
         <label for="correo">Correo electrónico:</label><br>
         <input type="email" id="correo" name="correo" required><br><br>
 
         <h2>Destinos turísticos</h2>
-        <select id="Destinos" name="Destinos[] " multiple>
+        <label for="destinos">Selecciona uno o más destinos (mantén Ctrl o Cmd para seleccionar varios):</label><br>
+        <select id="destinos" name="destinos[]" multiple size="7">
             <option value="Cancún">Cancún</option>
             <option value="Puerto Vallarta">Puerto Vallarta</option>
             <option value="Acapulco">Acapulco</option>
@@ -27,8 +27,48 @@
             <option value="Puerto Escondido">Puerto Escondido</option>
         </select><br><br>
 
-        <button type="submit">Generar paquete</button>
+        <h2>Actividades turísticas</h2>
+        <input type="checkbox" id="act1" name="actividades[]" value="Buceo">
+        <label for="act1">Buceo</label><br>
 
+        <input type="checkbox" id="act2" name="actividades[]" value="Paseo en lancha">
+        <label for="act2">Paseo en lancha</label><br>
+
+        <input type="checkbox" id="act3" name="actividades[]" value="Visita a zonas arqueológicas">
+        <label for="act3">Visita a zonas arqueológicas</label><br>
+
+        <input type="checkbox" id="act4" name="actividades[]" value="Senderismo">
+        <label for="act4">Senderismo</label><br>
+
+        <input type="checkbox" id="act5" name="actividades[]" value="Pesca deportiva">
+        <label for="act5">Pesca deportiva</label><br>
+
+        <input type="checkbox" id="act6" name="actividades[]" value="Recorrido gastronómico">
+        <label for="act6">Recorrido gastronómico</label><br>
+
+        <input type="checkbox" id="act7" name="actividades[]" value="Visita a museos">
+        <label for="act7">Visita a museos</label><br><br>
+
+        <h2>Servicios adicionales</h2>
+        <input type="checkbox" id="srv1" name="servicios[]" value="Transporte al aeropuerto">
+        <label for="srv1">Transporte al aeropuerto</label><br>
+
+        <input type="checkbox" id="srv2" name="servicios[]" value="Desayuno incluido">
+        <label for="srv2">Desayuno incluido</label><br>
+
+        <input type="checkbox" id="srv3" name="servicios[]" value="Hospedaje de lujo">
+        <label for="srv3">Hospedaje de lujo</label><br>
+
+        <input type="checkbox" id="srv4" name="servicios[]" value="Seguro de viajero">
+        <label for="srv4">Seguro de viajero</label><br>
+
+        <input type="checkbox" id="srv5" name="servicios[]" value="Renta de automóvil">
+        <label for="srv5">Renta de automóvil</label><br>
+
+        <input type="checkbox" id="srv6" name="servicios[]" value="Guía turístico">
+        <label for="srv6">Guía turístico</label><br><br>
+
+        <button type="submit">Generar paquete</button>
     </form>
 </body>
 </html>
